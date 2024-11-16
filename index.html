@@ -3,17 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embedded Notion Page</title>
+    <title>Responsive Embed</title>
     <style>
-        /* Full-page responsive iframe styling */
         body {
             margin: 0;
             padding: 0;
+            background-color: #f9f9f9; /* Optional background color */
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            background-color: #f9f9f9; /* Optional background color */
+            min-height: 100vh;
+        }
+
+        .responsive-iframe-container {
+            width: 100%;
+            max-width: 1200px; /* Optional max-width for larger screens */
+            aspect-ratio: 16 / 9; /* Keeps iframe proportional */
+            border: 2px solid #ccc; /* Matches iframe styling */
+            border-radius: 10px;
+            overflow: hidden; /* Ensures no overflow from iframe */
         }
 
         iframe {
@@ -21,20 +29,14 @@
             height: 100%;
             border: none;
         }
-
-        /* Optional max-width for large screens */
-        @media (min-width: 1200px) {
-            iframe {
-                max-width: 1200px;
-                height: calc(100vh - 50px); /* Adds a margin on larger screens */
-            }
-        }
     </style>
 </head>
 <body>
-    <iframe
-        src="https://www.notion.so/1400898545fd801a83d1c76590d6e01f?v=a6da177344524ea0a0e514d0f0b8503f&pvs=4"
-        allowfullscreen>
-    </iframe>
+    <div class="responsive-iframe-container">
+        <iframe 
+            src="https://v2-embednotion.com/1400898545fd80e984c6ed83628545cd" 
+            allowfullscreen>
+        </iframe>
+    </div>
 </body>
 </html>
