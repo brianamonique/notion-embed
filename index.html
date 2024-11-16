@@ -4,14 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Embedded Notion Page</title>
+    <style>
+        /* Full-page responsive iframe styling */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f9f9f9; /* Optional background color */
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Optional max-width for large screens */
+        @media (min-width: 1200px) {
+            iframe {
+                max-width: 1200px;
+                height: calc(100vh - 50px); /* Adds a margin on larger screens */
+            }
+        }
+    </style>
 </head>
-<body style="margin: 0; padding: 0;">
+<body>
     <iframe
         src="https://www.notion.so/1400898545fd801a83d1c76590d6e01f?v=a6da177344524ea0a0e514d0f0b8503f&pvs=4"
-        width="100%"
-        height="100vh"
-        frameborder="0"
-        allowfullscreen
-    ></iframe>
+        allowfullscreen>
+    </iframe>
 </body>
 </html>
